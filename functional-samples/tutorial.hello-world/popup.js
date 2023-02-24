@@ -13,13 +13,20 @@
 // limitations under the License.
 
 console.log("This is a popup!");
-chrome.tabs.getSelected(null,function(tab) {
-    var tablink = tab.url;
+
+chrome.tabs.getSelected(null, function(tab) {
+    myFunction(tab.url);
 });
 
-const tab_name = tab
-const url = document.getElementById("url")
-url.textContent = `${tab_name}`;
+function myFunction(tablink) {
+  // do stuff here
+  console.log(tablink);
+
+  const tab_name = tablink
+  const url = document.getElementById("url")
+  url.textContent = `${tab_name}`;
+}
+
 
 // When the user clicks on the extension action
 chrome.action.onClicked.addListener(async (tab) => {
