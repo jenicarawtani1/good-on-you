@@ -13,7 +13,9 @@
 // limitations under the License.
 
 console.log("This is a popup!");
-console.log(tab);
+chrome.tabs.getSelected(null,function(tab) {
+    var tablink = tab.url;
+});
 
 const tab_name = tab
 const url = document.getElementById("url")
