@@ -13,6 +13,11 @@
 // limitations under the License.
 
 console.log("This is a popup!");
+console.log(tab);
+
+const tab_name = tab
+const url = document.getElementById("url")
+url.textContent = `${tab_name}`;
 
 // When the user clicks on the extension action
 chrome.action.onClicked.addListener(async (tab) => {
