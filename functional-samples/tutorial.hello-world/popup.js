@@ -28,13 +28,3 @@ function myFunction(tablink) {
   const url = document.getElementById("url")
   url.textContent = `${tab_name}`;
 }
-
-
-// When the user clicks on the extension action
-chrome.action.onClicked.addListener(async (tab) => {
-  const tab_name = tab
-  console.log(tab_name)
-  const url = document.getElementById("url")
-  url.textContent = `${tab}`;
-
-});
